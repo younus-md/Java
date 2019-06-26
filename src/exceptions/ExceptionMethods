@@ -1,0 +1,9 @@
+e.printStrackTrace(): gives you name of exception , description & stackTrace(where the problem came)
+ex: java.lang.ArithmeticException:/by zero
+           at methodNameClassName
+e.toString() :gives you name & description not stackTrace
+ex: java.lang.ArithmeticException:/by zero
+e.getMessage(): gives you only description
+ex:/by zero
+
+All the above 3 methods are present in Throwable class
