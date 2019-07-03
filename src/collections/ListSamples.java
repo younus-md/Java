@@ -24,22 +24,23 @@ public class ListSamples {
     Collections.synchronizedList()- gives u synchronized ArrayList
    */
 
+
+    /* how add works?
+       there are two overloaded add methods
+       1.add(Object)
+       2.add(int index,Object)
+       lets look into add method of an array list :
+       public boolean add(E e){
+        ensureCapacity(size+1);
+        elementData[size++] = e;
+        return true;
+       }
+       we are checking the capacity of the ArrayList , before adding the element. ensureCapacity()determines what is the current size of occupied elements and what is the maximum size of the array.
+       If size of the  filled elements (including the new element to be added to the ArrayList class) is greater than the  maximum size of the array then increase the size of array. But the size of the array can not be increased dynamically. So what happens internally is new Array is created with capacity
+       */
     void doArrayList() {
         List<String> list = new ArrayList<String>();//Creating arraylist
         list.add( "Ravi" );
-        /* how add works?
-        there are two overloaded add methods
-        1.add(Object)
-        2.add(int index,Object)
-        lets look into add method of an array list :
-        public boolean add(E e){
-         ensureCapacity(size+1);
-         elementData[size++] = e;
-         return true;
-        }
-        we are checking the capacity of the ArrayList , before adding the element. ensureCapacity()determines what is the current size of occupied elements and what is the maximum size of the array.
-        If size of the  filled elements (including the new element to be added to the ArrayList class) is greater than the  maximum size of the array then increase the size of array. But the size of the array can not be increased dynamically. So what happens internally is new Array is created with capacity
-        */
         list.add( "Syed" );
         list.add( "Sunil" );
         list.add( "Ajay" );
@@ -53,7 +54,6 @@ public class ListSamples {
                 itr.remove();
 
             }
-
             System.out.println( list );
         }
         ListIterator listIterator = list.listIterator( list.size() );
