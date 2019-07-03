@@ -32,5 +32,10 @@ public class CollectionsDemo {
             System.out.println( st.name + " " + st.age );
         }
 
+        Comparble c = new Comparble();
+        c.doCompare();
+        Compartor c1 = new Compartor();
+        c1.comparatorDemo();
+
     }
 }
