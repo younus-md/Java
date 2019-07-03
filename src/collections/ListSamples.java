@@ -21,7 +21,7 @@ public class ListSamples {
     wrost choice when
     insertion is considered & delete
     String arraylistToString = StringUtils.collectionToCommaDelimitedString(language); converts arraylist to String using org.springframework.util.StringUtils
-
+    Collections.synchronizedList()- gives u synchronized ArrayList
    */
 
     void doArrayList() {
@@ -105,14 +105,19 @@ public class ListSamples {
 */
     }
 
+    /* Vector :introduced in 1.0 legacy class
+    has 4 constructors  the 3 constructors are same as ArrayList but new contructor is
+    Vector v = new Vector(int capaity,int IncrementaclCapacity)
+    capaity is 10
+     if new element added then capcaity= 2 * old capacity*/
     void doVector() {
         Vector<String> v = new Vector<String>();//creating vector
         v.add( "umesh" );//method of Collection
         v.addElement( "irfan" );//method of Vector
         v.addElement( "kumar" );
         //traversing elements using Enumeration
-        Enumeration e = v.elements();
-        while (e.hasMoreElements()) {
+        Enumeration e = v.elements(); // creates enumeration objects
+        while (e.hasMoreElements()) { //
             System.out.println( e.nextElement() );
         }
     }
@@ -160,11 +165,12 @@ public class ListSamples {
     ArrayList  list=(ArrayList)ois.readObject();
             System.out.println(list);*/
 
-
-    /*
-No capacity required only 2 constructors
-addFirst();addLast(); object geFirst();object getLast(); oobject removeFirst() object removeLast()
-*/
+    /* Linked List:
+     works on node
+    No capacity required only 2 constructors
+    addFirst();addLast(); object geFirst();object getLast(); oobject removeFirst() object removeLast()
+    Best choice if insertion /deletion is your frequent operation & worst if ur choice is searching
+    */
     void operateLinkedList() {
 
         List linkedList = new LinkedList();
