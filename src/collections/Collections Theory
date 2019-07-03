@@ -1,0 +1,91 @@
+
+Collections vs Arrays
+-----------------------------------------------------------------------------------------------------
+Arrays are:
+fixed in size
+homogenous
+not a good choice for memory
+good performance
+no underlying data structure(if we want to add any element need to do wit code)
+can hold primitives & objects
+Collections:
+growable in size
+homogenous & hetrogenous
+support underlying dats structure
+good choice for memory
+not that good for performance
+can hold only objects
+-----------------------------------------------------------------------------------------------------
+Collection : group of individual objects
+
+Collection vs Collections
+------------------------------------------------------------------------------------------------
+Collection: is an core interface
+Collections : is an utility class that defines methods like sort.. it contains all static methods min,max..
+---------------------------------------------------------------------------------------------------------------
+List vs Set
+-------------------------------------------------------------------------------------------------
+List : allows duplicate , preserves insertion order
+Set: no duplicates, doesnt preserve insertion order
+----------------------------------------------------------------------------------------------
+There is no method to get an element directly from collection interface
+Except Treeset & TreeMap heterogenous elements are allowed
+
+Each collection class implements serializable,clonable interface
+
+ArrayList vs Vector
+----------------------------------------------------
+ArrayList is non-synchronized & fast  whereas Vector is synchronized &slow. Vector is a legacy(1.0) class but AL is not(1,2v)
+---------------------------------------------------------------------------------------------------------------
+Public Static synchronizedList(ArrayList AL)-gives synchronized Array List
+
+ArrayList vs LikedList
+----------------------------------------------------------------------------------------------------
+ArrayList is based on Resizable array and is best for retrival operations & is fast bcz it implements RandomAccess where as
+Linked List is based on Double LinkedList & is best for insertion deletion operations &doesnt implement RandomAccess
+-----------------------------------------------------------------------------------------------------------------
+3 cursors of Java
+1. Enumeration : Applicable for only Legacy classes like Vector.Uni -Directional
+Enumeration e = v.elements(); // creates enumeration objects
+        while (e.hasMoreElements()) { //
+            System.out.println( e.nextElement() );
+        }
+Only retrival is possible not removal
+
+2.Iterator : Universal Cursor & Uni- Directional
+  Iterator itr = list.iterator();
+        while (itr.hasNext()) {
+            String name = (String) itr.next();
+            if (name == "Ajay") {
+                itr.remove();
+            }
+removal is possible not replacement & only farward
+
+3.ListIterator:Bidirectinal, Read Remove Replace
+ListIterator lisIterator= li.listIterator()
+
+applicable to List
+
+HashSet vs Linked HashSet
+--------------------------------------------------------
+HsshSet is based on HashTable & doesnt preserve insertion oreder & is best for searching operations
+LinkedHashSet is based on HashTable & LinkedList preserve insertion order best for cache based applications
+
+Comparable vs Comparator
+------------------------------------------------------------------------------------------
+Comparable deals with default sorting order present in java.lang package with one method implemented by Wrapper & String classes
+here original class is modified
+
+Comparable delas with customised sorting present in java.uti with two methods implemented by Collator &Rule Based Collator no original class is modified
+
+HashMap vs HashTable
+-------------------------------------------------------------------------------------------------------------
+HashMap is non-synchronized allows one null key & null value & is fast where as HashTable is synchronized no nulls are allowed & slow
+
+
+
+
+
+
+
+
