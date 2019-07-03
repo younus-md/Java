@@ -3,25 +3,43 @@ package collections;
 import java.util.*;
 
 public class ListSamples {
-
-
     /*
-    ArrayList arrayList=new ArrayList( ); Default Capacity 10 (if a new element is added ,new capacity =currentcapacity*3/2+1)
+    ArrayList is based on Resizable/Growable array
+    3 constructors
+    ArrayList arrayList=new ArrayList( );
     ArrayList arrayList=new ArrayList(int Capacity)
     ArrayList arrayList=new ArrayList( Collection c)
+    Default Capacity 10.
+    if a new element is added ,
+    till java 6 new capacity =currentcapacity*3/2+1)
+    from java 7 new Capacity=currentcapacity+(currentcapacity >>1)
+
     When we print object refernce,internally toString() will be called. In collection it will be []
     ArrayList & Vector implements RandomAccess interface(markable interface) so that any random element we can aceess with same speed
     When You Use ArrayListt:
     if frequent opeartion is Retrieveal
     wrost choice when
     insertion is considered & delete
-            String arraylistToString = StringUtils.collectionToCommaDelimitedString(language); converts arraylist to String using org.springframework.util.StringUtils
+    String arraylistToString = StringUtils.collectionToCommaDelimitedString(language); converts arraylist to String using org.springframework.util.StringUtils
 
    */
 
     void doArrayList() {
         List<String> list = new ArrayList<String>();//Creating arraylist
         list.add( "Ravi" );
+        /* how add works?
+        there are two overloaded add methods
+        1.add(Object)
+        2.add(int index,Object)
+        lets look into add method of an array list :
+        public boolean add(E e){
+         ensureCapacity(size+1);
+         elementData[size++] = e;
+         return true;
+        }
+        we are checking the capacity of the ArrayList , before adding the element. ensureCapacity()determines what is the current size of occupied elements and what is the maximum size of the array.
+        If size of the  filled elements (including the new element to be added to the ArrayList class) is greater than the  maximum size of the array then increase the size of array. But the size of the array can not be increased dynamically. So what happens internally is new Array is created with capacity
+        */
         list.add( "Syed" );
         list.add( "Sunil" );
         list.add( "Ajay" );
@@ -164,5 +182,7 @@ addFirst();addLast(); object geFirst();object getLast(); oobject removeFirst() o
 
 /*
     difference ArrayList vs Vector
+
+
 */
 }
