@@ -1,0 +1,5 @@
+Functional Interfaces : Any interface that has only one abstarct method is called Functional Interface. To invoke Lamnda expression we use FI
+ex: Runnable, Callable, Comparable, Comparator. @FunctionalInterface annotation is used to mark any interface as Fi
+If a parent inerface is FI then child interface is also FI(if it doesnt have any extra abstarct method)
+
+Lambda Expression: an anonymous function. During compilation it is converted to a private method but no seperate .class file is generated
