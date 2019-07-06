@@ -3,3 +3,16 @@ ex: Runnable, Callable, Comparable, Comparator. @FunctionalInterface annotation 
 If a parent inerface is FI then child interface is also FI(if it doesnt have any extra abstarct method)
 
 Lambda Expression: an anonymous function. During compilation it is converted to a private method but no seperate .class file is generated
+
+Anonymous Inner Class vs Lambda
+-----------------------------------------------------------------------------------------------------------
+Anonymous Inner Class can extend an abstarct class, normal class & implement interface. so it is best
+lambda expression can implement an interface which contains a single abstract method
+
+Default & Static Methods in Interface:
+-------------------------------------------------
+Default or Virtual Extension or Defendor: Helps to add a new method without affecting the implementation classes.
+We can directly call or override default method. When you override it it must be declared as public
+Object class methods cant be implement as default methods as they are by default available to all classes
+Multiple inheritance is possible w.r to Default methods
+Static Methods: Generally static is associated with class rather then object. Class is acostly operation. So interface added static method making it more meaningful
