@@ -37,9 +37,11 @@ class MyComparator implements Comparator {
 
         } else
             return 0;
+
 // If we cn use this it gives ascending irder
         //  return integer1.compareTo( integer2 );
         // retuurn -integer1.compareTo(integer2);
+        //return (i1>i2)?1:(i1<i2):0
         //return 0 // only first element will be inserted all be eliminated
     }
 }
