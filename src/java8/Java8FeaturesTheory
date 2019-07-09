@@ -16,3 +16,24 @@ We can directly call or override default method. When you override it it must be
 Object class methods cant be implement as default methods as they are by default available to all classes
 Multiple inheritance is possible w.r to Default methods
 Static Methods: Generally static is associated with class rather then object. Class is acostly operation. So interface added static method making it more meaningful
+
+Predefined Functional Interfaces:
+----------------------------------------------------------------------
+Predicate - Conditional Checks - has test method joining is possible using and or negate methods return boolean
+Function -- performs operations & return result -- has apply method chaining is possible by using andThen & compose methods can return anything
+f1.andThen(f2).apply(pre)- fi followed by f2
+f1.compose(f2).apply(pre)-f2 followed by f1
+Consumer -- take input perform some operation but dont return any thing . mostly store in db. accept method
+Supplier
+------------------------------------------------------------------------
+Two Predefined Functional Interfaces
+
+Bi-Predicate
+Bi-Function
+Bi-Consumer
+
+----------------------------------------------------------------------
+Primitive
+-----------------------------------------------------
+Int Predicate
+Double Predicate
