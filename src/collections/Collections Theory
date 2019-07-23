@@ -76,7 +76,7 @@ Comparable vs Comparator
 Comparable deals with default sorting order present in java.lang package with one method implemented by Wrapper & String classes
 here original class is modified
 
-Comparable delas with customised sorting present in java.uti with two methods implemented by Collator &Rule Based Collator no original class is modified
+Comparator delas with customised sorting present in java.uti with two methods implemented by Collator &Rule Based Collator no original class is modified
 
 HashMap vs HashTable
 -------------------------------------------------------------------------------------------------------------
