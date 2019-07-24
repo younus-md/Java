@@ -1,0 +1,45 @@
+polymorphism: means having many forms i.e poly - many morphism -forms
+two types
+overloading / compile time polymorphism or static or early binding: if 2 methods has same name different methods they are overloaded.
+Automatic Promotion: If your class has method that accept float arguments but if you try to pass double argument then it will be automatically converted
+to float type & that method will be called. else case an compile time error is thrown saying cannot find symbol
+Child Presedence: while resolving overloaded methods compiler gives first presedence(priority) for child type argument rather than parent argument
+Ambiguous Scenario: If you have two methods which are taking String & String buffer as argument then if you try calling method with null argument you
+will get reference to method is ambigous
+If Class B extends Class A then if both classes has overloaded method  then
+
+A a=new B() // A's method will be called not B's bcz runtime object doent come into picture. Compiler looks for reference
+
+overriding /run time polymorphism or late binding: When a method in a subclass has the same name, same parameters or signature and same return type(or sub-type)
+as a method in its super-class, then the method in the subclass is said to override the method in the super-class. Here method resolution taken care by JVM
+
+Rules for Overriding:
+
+1.The argument list should be exactly the same as that of the overridden method.
+2.The return type should be the same or a subtype of the return type declared in the original overridden method in the super class.
+3.The access level cannot be more restrictive than the overridden method’s access level.
+  For example: if the super class method is declared public then the over-ridding method in the sub class cannot be either private or protected.
+4.Instance methods can be overridden only if they are inherited by the subclass.
+5.A method declared final cannot be overridden.
+6.A method declared static cannot be overridden but can be re-declared.
+7.If a method cannot be inherited then it cannot be overridden.
+8.A subclass within the same package as the instance’s superclass can override any superclass method that is not declared private or final.
+9.A subclass in a different package can only override the non-final methods declared public or protected.
+10.An overriding method can throw any uncheck exceptions, regardless of whether the overridden method throws exceptions or not.
+11.However the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower or fewer exceptions than the overridden method.
+12.Constructors cannot be overridden
+13.private methods cannot be overridden
+14.If the overridden method is has default access, then the overriding one must be default, protected or public.
+15.If the overridden method is protected, then the overriding one must be protected or public.
+16.If the overridden method is public, then the overriding one must be only public.
+17.Abstract method must be overriden to provide implementation
+18.It is possible to override parent class non-abstract method as abstarct method in Child class and make it abstract
+
+
+Overloading vs Overriding
+
+Overloading happens at compile time only method name must be same method resolution is decided by compiler
+
+where as
+overriding happens at run time both method name and num of arguments must be same, method resoultion is decided
+by jvm. happens in parent -child class
