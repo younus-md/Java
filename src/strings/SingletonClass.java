@@ -1,5 +1,4 @@
 package strings;
-
 /*In oops, a singleton class is a class that can have only one object (an instance of the class) at a time.Singletons often control access to resources, such as database connections or sockets.
 
  Constructor should be private
