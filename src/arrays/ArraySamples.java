@@ -42,7 +42,7 @@ public class ArraySamples {
         System.out.println( Arrays.toString( c ) );
     }
 
-    public static int removeDuplicateElements(int arr[], int n) {//use set or sort & use index
+    public int removeDuplicateElements(int arr[], int n) {
         if (n == 0 || n == 1) {
             return n;
         }
@@ -50,19 +50,14 @@ public class ArraySamples {
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] != arr[i + 1]) {
                 arr[j++] = arr[i];
-
             }
         }
-        System.out.println( "j" + j++ + "arr[j++]" + arr[j++] + "n-1" + arr[n - 1] );
         arr[j++] = arr[n - 1];
-        System.out.println( "arr[j++]" + arr[j++] + "j" + j );
-
         return j;
     }
 
     public void findDuplicates(int[] crr) {
         int j = 0;
-        int count = 0;
         for (int i = 0; i < crr.length - 1; i++) {
             if (crr[i] == crr[i + 1]) {
                 crr[j++] = crr[i];
