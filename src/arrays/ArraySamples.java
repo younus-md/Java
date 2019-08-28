@@ -78,7 +78,7 @@ public class ArraySamples {
             for (int i = 0, j = 0; i < l1 & j < l2; i++, j++) {
                 temp[i] = a[i] + b[j];
             }
-            System.out.println( "Array Addition" );
+            System.out.println( "Array Addition If both are same length" );
             dispArray( temp );
 
         } else if (l1 > l2) {
