@@ -42,7 +42,30 @@ Length of try-catch block should be minimal
 Exceptions can be raised also in catch block & finally block
 If an exception is raised in catch block without finally block then it is abnormal termination
 
+An exeption can be rethrown by throwing same exception in catch block
 throw vs throws
 ------------------------------------------------------
-throw : used to create an explicit exception object. can throw only exceptions errors not classes
+throw : used to create an explicit exception object. can throw only exceptions errors not classes. can throw only 1 exception
+throws: declare exceptions (not to throw).It is always used with method signature. can declare multiple exceptions
+
+
+Exception Handling + Method Overriding Rules:
+-----------------------------------------------------------------------------------------------------------------
+1. If Parent class  method has not declared any exception then child class overriden method can declare only un-checked exception not checked exception
+2. If Parent Class method has declares an exception then child class overriden method can use same or its subclasses or no exception but not its parent classes
+----------------------------------------------------------------------------------------------------------------------------------------
+Best Practices:
+-----------------------------------------------------------------------
+Returning boolean instead of returning null to avoid NullPointerException at callers end.
+Use Checked Exception for Recoverable error and Unchecked Exception for programming error.
+Close or release resource in finally block.
+Including cause of Exception in stack-trace
+Always provide meaning full message on Exception
+Converting Checked Exception into RuntimeException
+Avoid empty catch blocks.
+Prefer Unchecked exception over checked until you have a very good reason of not to do so. it improves readability of
+code by removing boiler plate exception handling code
+Handle all Database Exceptions at DAO layer
+calling close() methods for connections, statements, and streams on finally block in Java.
+
 
