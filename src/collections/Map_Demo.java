@@ -13,4 +13,6 @@ public class Map_Demo {
     }
 
 
+    public void operateHashMap() {
+    }
 }

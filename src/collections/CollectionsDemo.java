@@ -17,8 +17,6 @@ public class CollectionsDemo {
         //setSamples.operateHashSet(); //Hashset better for searching based on hshing
         setSamples.operateLinkedHashSet();//Insertion order
         setSamples.treeSet();
-        Map_Demo map_demo = new Map_Demo();
-        map_demo.operateHashMap();
         // hashset & linked hash set uses equals() but treeset uses compareTo()
         //arrays.Sorting
         //comparable 1

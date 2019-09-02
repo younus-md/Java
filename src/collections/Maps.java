@@ -24,7 +24,7 @@ public class Maps {
 
     void operateHashMap() {
         Map<String, Integer> map = new HashMap<>();
-        System.out.println( "hii" + map.put( "name", 1 ) ); // nulll
+        System.out.println( "hii" + map.put( "name", 1 ) );
         // put method calculates hashcode of key &
         map.put( "add", 2 );
         System.out.println( map.put( "name", 3 ) );
