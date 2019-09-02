@@ -1,0 +1,48 @@
+Exception :
+Exceptions are events that occur during the execution of programs that disrupt the normal flow of instructions
+                                        (or)
+An exception is an unwanted or unexpected event, which occurs during the execution of a program i.e at run time,
+that disrupts the normal flow of the program’s instructions.
+Examples: divide by zero, array index out of bound, etc.
+
+Are Exception & Error both same?
+No, An Exception can be handled using "try-catch" or using "throws" where as Errors  mainly caused by the environment in which application is running
+can't be handled using the same. All Errors are unchecked
+Exception : ArrayIndexOutofBounds
+Error:OutOfMemoryError (will discuss more on this)
+You can read more here ::
+https://techdifferences.com/difference-between-error-and-exception.html
+https://javaconceptoftheday.com/difference-between-error-vs-exception-in-java/
+
+RunTimeStack: For every Thread JVM creates a runtime stack.Each &every method call performed by that Thread will be stored  in corresponding stack.
+Each entry in stack is called "Activation Record or Stack Frame". After completing every method call, corresponding entry from stack will be removed.
+After completing all method calls,stack will become empty & Jvm destroys that just before terminating Thread.
+
+Checked vs Unchecked
+Error & its Subclasses , Runtime Exception & its child classes are unchecked
+
+PartiallyChecked vs FullyChecked
+
+A checked exception is said to be fully checked if all its child classes also checked (IOException,InterruptedException..) & its reverse case is
+Partially Checked (Exception,Throwable)
+
+Lets look into the below code
+try{
+line1
+line2
+line3
+}catch(){
+line5
+}
+line4
+1: If no exception then line1,line2,line3,line4 no catch block
+2. If an exception occurs at line 2 then line1,line5,line4
+
+Length of try-catch block should be minimal
+Exceptions can be raised also in catch block & finally block
+If an exception is raised in catch block without finally block then it is abnormal termination
+
+throw vs throws
+------------------------------------------------------
+throw : used to create an explicit exception object. can throw only exceptions errors not classes
+
