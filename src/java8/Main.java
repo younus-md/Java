@@ -5,6 +5,7 @@ import com.sun.org.apache.bcel.internal.generic.LMUL;
 import java.util.ArrayList;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Main implements DefaultMethods {
 
@@ -69,6 +70,12 @@ public class Main implements DefaultMethods {
             /*Function Interface*/
             Function<Integer, Integer> f = i -> i * i;
             System.out.println( f.apply( 7 ) );
+
+            /*Streams*/
+            StreamSample streamSample = new StreamSample();
+            streamSample.doStreamCreation();
+            streamSample.intermediateOperators();
+            streamSample.doTerminalOperations();
 
 
         }
