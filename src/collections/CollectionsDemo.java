@@ -14,12 +14,10 @@ public class CollectionsDemo {
         listSamples.operateLinkedList();*/
         listSamples.arrayListToArray();
         SetSamples setSamples = new SetSamples();
-        //setSamples.operateHashSet(); //Hashset better for searching based on hshing
+        //setSamples.operateHashSet(); //Hashset better for searching based on hashing
         setSamples.operateLinkedHashSet();//Insertion order
         setSamples.treeSet();
         // hashset & linked hash set uses equals() but treeset uses compareTo()
-        //arrays.Sorting
-        //comparable 1
         List<Employee> al = new ArrayList<>();
         al.add( new Employee( 101, "Vijay" ) );
         al.add( new Employee( 106, "Ajay" ) );
