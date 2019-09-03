@@ -36,7 +36,7 @@ public class ArraySamples {
         }
         String a[] = {"A", "E", "I"};
         String b[] = {"O", "U"};
-        List list = new ArrayList( Arrays.asList( a ) );
+        List<String> list = new ArrayList( Arrays.asList( a ) );
         list.addAll( Arrays.asList( b ) );
         Object[] c = list.toArray();
         System.out.println( Arrays.toString( c ) );
@@ -141,22 +141,6 @@ public class ArraySamples {
         }
         dispArray( arr1 );
 
-        /*ArrayList als = new ArrayList( Arrays.asList( arr1 ) );
-        System.out.println( "als" + als );
-        Collections.reverse( als );
-        for (al:
-             als) {
-
-        }
-        Integer[] integers = (Integer[]) als.toArray();
-        Object arr3[] = als.toArray();
-        for (int a : arr1) {
-            System.out.println( "aaa" + a );
-        }
-        Collections.reverse( Arrays.asList( arr1 ) );
-
-        System.out.println( "reversed" + Arrays.asList( arr1 ) )*/
-        ;
 
     }
 
