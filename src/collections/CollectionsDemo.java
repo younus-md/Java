@@ -20,7 +20,7 @@ public class CollectionsDemo {
         // hashset & linked hash set uses equals() but treeset uses compareTo()
         //arrays.Sorting
         //comparable 1
-        List<Employee> al = new ArrayList<Employee>();
+        List<Employee> al = new ArrayList<>();
         al.add( new Employee( 101, "Vijay" ) );
         al.add( new Employee( 106, "Ajay" ) );
         al.add( new Employee( 105, "Jai" ) );
