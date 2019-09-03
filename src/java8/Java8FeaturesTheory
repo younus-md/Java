@@ -41,6 +41,4 @@ Double Predicate
 Streams (java.util.stream) an interface
 -----------------------------------------------------------------------------------------------------
 A stream is a sequence of elements from a source(collections/arrays) that supports aggregate operations on them. or A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
-
-
 Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
