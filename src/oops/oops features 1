@@ -1,0 +1,24 @@
+DataHiding
+Encapsulation
+Polymorphism(Overloading & Overriding)
+Abstraction
+Inheritance
+
+------------------------
+Is-A-Relationship
+Has-A-Relationship
+Constructor
+static flow control
+instance flow control
+coheson & coupling
+method signature
+toghtly encapsulated class
+type casting
+
+---------------------------------------------------------------------------------------
+
+Encapsulation: Wrapping of data+ code into one unit. A java bean class is an example of fully encapsulated one.
+Uses: Make class read-only or write only using setter/getters
+      Hide Data
+      Gives control over data
+      Easy to Test
