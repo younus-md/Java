@@ -1,0 +1,14 @@
+Singleton : restricts instantiation of a class & ensures only one instance exists at any time.Provides Global access to get 1 instance at any time
+Used to control access to resources like Database ,Sockets (For logging, caching, driver objects)
+java.lang.Runtime & java.awt.Desktop uses this
+Types:
+
+Eagerly Initialization : Instance is created while class loading drawback is instance is created even if client application doesnt use it
+StaticBlock Intitailization : similar to above but we can add exception handling
+Lazy Initialization: creates object when called not threadsafe
+Synchronised Singleton - thread -safe . use synchronized keyword
+
+Rules:
+1.Constructor should be private to restrict the access from another class
+2.Declare a static private variable object of the class
+3.Public static method that returns the instance of class (this acts as global access)
