@@ -39,7 +39,7 @@ public class ListSamples {
        If size of the  filled elements (including the new element to be added to the ArrayList class) is greater than the  maximum size of the array then increase the size of array. But the size of the array can not be increased dynamically. So what happens internally is new Array is created with capacity
        */
     void doArrayList() {
-        List<String> list = new ArrayList<String>();//Creating arraylist
+        List<String> list = new ArrayList<>();//Creating arraylist
         list.add( "Ravi" );
         list.add( "Syed" );
         list.add( "Sunil" );
@@ -111,7 +111,7 @@ public class ListSamples {
     capaity is 10
      if new element added then capcaity= 2 * old capacity*/
     void doVector() {
-        Vector<String> v = new Vector<String>();//creating vector
+        Vector<String> v = new Vector<>();//creating vector
         v.add( "umesh" );//method of Collection
         v.addElement( "irfan" );//method of Vector
         v.addElement( "kumar" );
@@ -123,7 +123,7 @@ public class ListSamples {
     }
 
     void listToArray() {
-        List<String> stockList = new ArrayList<String>();
+        List<String> stockList = new ArrayList<>();
         stockList.add( "stock1" );
         stockList.add( "stock2" );
         stockList.add( "stock3" );
