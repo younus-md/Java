@@ -1,4 +1,4 @@
-package java8;
+package java8.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -74,5 +74,39 @@ public class StreamSample {
         names.add( "Khovawale" );
         names.add( "Younus" );
         return names;
+    }
+
+    public void mapToInt(List<Integer> list1) {
+        int arr[] = list1.stream().mapToInt( a -> a ).toArray();
+        iterateArr( arr );
+        int sum = list1.stream().mapToInt( a -> a ).sum(); // sum of elements in a single step
+        System.out.println( "sum" + sum );
+        List<String> strList = generateStringList();
+        int len = strList.stream().mapToInt( str -> str.length() ).sum();
+        System.out.println( "sum of length" + len );
+    }
+
+    private List<String> generateStringList() {
+        List<String> strList = new ArrayList<>( Arrays.asList( "Syed", "Mohammed", "Younus", "Capgemini" ) );
+        return strList;
+    }
+
+    private void iterateArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print( arr[i] );
+        }
+    }
+
+    public void sortWithStream() {
+        List<String> strList = generateStringList();
+        List<String> sortedList = strList.stream().sorted().collect( Collectors.toList() );
+        sortedList.forEach( System.out::println );
+        System.out.println( "Uisng Lambda" );
+        List<String> sortedList1 = strList.stream().sorted( (o1, o2) -> o1.compareTo( o2 ) ).collect( Collectors.toList() );
+        sortedList1.forEach( System.out::println );
+        System.out.println( "In reverse Order" );
+        List<String> revSortedList = strList.stream().sorted( Comparator.reverseOrder() ).collect( Collectors.toList() );
+        revSortedList.forEach( System.out::println );
+
     }
 }

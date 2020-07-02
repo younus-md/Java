@@ -1,8 +1,6 @@
 package java8;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 /* Lambda Expression: Any function that is written without any,modifiers & has no name is defined as lambda expression
 curly braces are optional if there is only one line of code. We use Functional Interface to invoke LE
@@ -10,7 +8,13 @@ ex: to get square using lambda
 (int number)->  number*number
 number -> number *number if only one parameter is there then ( are) optional
 To get length of string abc with labda abc->abc.length
+we can assign lambda to variables
+Lambda expression has got 3 parts
+1. argument list
+2. array token
+3. body
 
+A variable should always be declared final to use in lambda expression.
 Using Return :
 n-> {return n+2;}; valid
 n-> {return n+2} invalid because semicolon is missing
@@ -22,7 +26,6 @@ public class LambdaFeature {
      The below method we use Lambda to instantiate a Thread using Runnable without implementing it using an extra class
      */
     void implementRunnableUsingLambda() {
-
         Runnable runnable = () -> {
             for (int i = 0; i <= 5; i++) {
                 System.out.println( "Child Thread " );
@@ -31,7 +34,10 @@ public class LambdaFeature {
         Thread thread = new Thread( runnable );
         thread.start();
 
+        new Thread( () -> System.out.println( "Sampe Thread" ) ).start(); // using Thread
+
     }
+
 
     /*2. Usage of Lambda in Collections: As Comparator is a Functional Interface, we can use Lambda to sort array list elements
      */
@@ -46,7 +52,7 @@ public class LambdaFeature {
         Collections.sort( arrayList, comparator );
         System.out.println( "sorted arraylist" + arrayList );
 
-        ArrayList<SoftwareEngineer> softwareEngineers = new ArrayList<SoftwareEngineer>();
+        List<SoftwareEngineer> softwareEngineers = new ArrayList<SoftwareEngineer>();
         softwareEngineers.add( new SoftwareEngineer( 45000, "Iliyas" ) );
         softwareEngineers.add( new SoftwareEngineer( 4000, "Iliyas" ) );
         softwareEngineers.add( new SoftwareEngineer( 5000, "Vamsi" ) );
@@ -57,7 +63,22 @@ public class LambdaFeature {
         Collections.sort( softwareEngineers, (softwareEngineer1, softwareEngineer2) -> (softwareEngineer1.name.compareTo( softwareEngineer2.name )) );
         System.out.println( "Software Engineer Sorting by names" + softwareEngineers );
 
+        softwareEngineers.forEach( softwareEngineer -> {
+            System.out.println( "name" + softwareEngineer.name );
+        } );
+
     }
 
+    void splitString() {
+
+        Runnable run = () -> {
+            String str = "hi how are you doing";
+            String[] tok = str.split( " " );
+            List<String> lis = Arrays.asList( tok );
+            lis.forEach( lis1 -> System.out.println( lis1 ) );
+        };
+
+
+    }
 
 }
