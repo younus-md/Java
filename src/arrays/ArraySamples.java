@@ -172,6 +172,8 @@ public class ArraySamples {
         }
         System.out.println( "Array Elements after sorting in Ascending Order" );
         dispArray( arr1 );
+
+        // else use a flag variable & while
     }
 
     public void sortInDesscendingOrder(int[] arr1) {
@@ -184,8 +186,29 @@ public class ArraySamples {
                 }
             }
         }
-        System.out.println( "Array Elements after sorting in Descending Order" );
+        System.out.println( "Array Elements after sorting in Descending Order" + Arrays.toString( arr1 ) );
         dispArray( arr1 );
     }
 
+    public void blowCandles() {
+        int crr[] = {3, 2, 3, 1};
+        int max = crr[0];
+        int freq = 0;
+        for (int i = 0; i < crr.length; i++) {
+            if (crr[i] == max) {
+                freq++;
+            }
+            if (crr[i] > max) {
+                max = crr[i];
+                freq = 1;
+            }
+
+        }
+        System.out.println( "----------" + freq );
+    }
+
+    public long doLong(long[] a) {
+        return 0;
+
+    }
 }

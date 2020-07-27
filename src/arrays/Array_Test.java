@@ -5,12 +5,23 @@ import java.util.Arrays;
 
 public class Array_Test {
 
+
+   /* Boolean arrays are initialized to false
+     For String or other objects they are initialized to null
+     int [] myNumb={0,1,2,3,4} --anonymous array
+     Array is a reference type
+     Resize an array : Refer coding package
+
+     */
+
     public static void main(String[] args) {
 
         //Arrays
         ArraySamples aSample = new ArraySamples();
         int[] crr = {1, 2, 3, 4, 5, 1, 2, 6, 7, 8, 1};
-        int[] arr1 = {32, 45, 56, 90, 65};
+//        int[] arr1 = {32, 45, 56, 90, 65};
+        int[] arr1 = {132, 45, 56, 900, 65};
+
         int arr2[] = {4, 0, 87};
         aSample.doMerge();
         aSample.findDuplicates( crr );
@@ -18,6 +29,11 @@ public class Array_Test {
         aSample.reverseArray( arr1 );
         aSample.sortInAscendingOrder( arr1 );
         aSample.sortInDesscendingOrder( arr1 );
+
+        long[] a = {3, 6, 0};
+        long res = aSample.doLong( a );
+
+        aSample.blowCandles();
         int secondLargest = aSample.getSecondLargestElement( arr1 );
         System.out.println( "secondLargest" + secondLargest );
         Arrays.sort( crr );

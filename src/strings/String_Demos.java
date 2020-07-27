@@ -10,13 +10,23 @@ String implements java.io.Serializable, Comparable<String>, CharSequence
 String s= new String()
 String s= new String("yns")
 String s=new String(StringBuffer sb)
+String s=new String(StringBuilder sb)
 String s=new String(char[] ch)
 String s=new String(byte[]b)
 
 Methods
 public char charAt(index i)
 public string concat(String s)
-trim() removes blannk spaces only in begining & end
+public boolean equals(Object o)
+public boolean equalsIgnoreCase(String s)
+public boolean isEmpty()
+public int length()
+Public String replace(char oldchar,char newchar)
+public String substring(int begin) / gives substring from beginindex to end
+public String substring(int begin,int end)// gievs substring from begin to end-1
+public int indexOf(char c)// gives first index only /gives -1 if character is not found
+public int lastIndexOf(char c)// gives last index
+public String trim() removes blank spaces only in begining & end
 indexOf &lastIndexOf
 */
 
@@ -47,11 +57,29 @@ public class String_Demos {
     5. final StrinngBuffer sb=new StringBuffer("Syed")
     sb.append("Moha")// possible
     but u cant reasign (final applies to variables immutability to object)
-      */
+     6. SCP objects are never garbage collected
+       String s= new String ("abc")
+       s.concat("def")  two oobjects in heap & 2 object in scp
+       7. String s = "abcdef"
+       String s2="abc"+"def" // addition will be performed at compile time it becomes abcdef
+       in above case both points to same object  abcdef in scp
+       8.String s= "abc"
+       String s1= s+"def"    2 objects in  scp and one object in Heap (s1)  its perfomormed at run time bcz of variable  //
+       9. All wrapper classes are immutable
+       10. String s= new String("syed");
+       String s1=s.toUpperCase() - anew object is created & asigned to s1
+       String s2=s.toLowerCase() - no new object is created as the content is same
+       String s3=s.t
+       oString
+       s==s3//t
+        s==s1 //f
+        s==s2//t
+       */
 
     void compareStrings() {
         String s1 = new String( "Syed" );
         String s2 = new String( "Syed" );
+
         System.out.println( s1 == s2 ); // f == checks references
         System.out.println( s1.equals( s2 ) ); // t
         StringBuffer sb1 = new StringBuffer( "Syed" );
@@ -60,6 +88,8 @@ public class String_Demos {
         System.out.println( s1.equals( s2 ) ); //f bcz in String buffer there is no equals method it takes frtom Object class which means reference compariosn
         String str = new String( "Yns" ); // 2 objects are created one in heap & other in scp but reference will be point to heap
         String str1 = "Yns";// one in scp Gc not access SCP area. All scp objects are destroyed during jvm shutdown or during Server shutdown
+        str1 = "ABC";
+        System.out.println( "str1" + str1 );
         String sd = "";
         System.out.println( sd.length() );
 //        sd=null;
@@ -113,6 +143,7 @@ public class String_Demos {
         // we can also use charAt(i)
         for (int i = charArray.length - 1; i >= 0; i--) {
             rev = rev + charArray[i];
+
         }
         System.out.println( rev );
         if (rev.equals( inputString )) {
@@ -172,7 +203,7 @@ public class String_Demos {
         Set<Character> set = hashMap.keySet();
         for (Character ch1 : set) {
             if (hashMap.get( ch1 ) > 1) {
-                System.out.println(ch1+"::"+hashMap.get( ch1 ));
+                System.out.println( ch1 + "::" + hashMap.get( ch1 ) );
             }
         }
 
@@ -219,7 +250,8 @@ public class String_Demos {
         return Num + "and they are" + resString;
 
     }
-// run method returns object of configurable application context
+
+    // run method returns object of configurable application context
     String countVowels(String res) {
         int countA, countE, countU, countI, countO;
         countA = countE = countU = countI = countO = 0;
@@ -243,4 +275,12 @@ public class String_Demos {
         return resVowels;
     }
 
+
+    public void doTrim(String s) {
+        s.trim();
+        System.out.println( s.equals( "" ) + "------" +
+                s.isEmpty() );
+        int index = s.indexOf( " " );
+        System.out.println( index );
+    }
 }

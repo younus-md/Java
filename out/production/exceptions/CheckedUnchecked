@@ -1,0 +1,9 @@
+Checked Exceptions: The exceptions checked by compiler for smooth execution of program during run time are called checked exceptions
+ Can be handled by try-catch or throws keyword otherwise will get compile time error (Unreported Exception)
+ex: IOException(EOFException,InterupptedException,FileNotFoundException),ServletException,SQLException,RemoteException
+
+UnChecked :The exceptions that are not checked by compiler are called Unchecked Exceptions
+ex: Arithmetic Exceptions, ArrayIndexOutOfBound, StringIndexOutOfBound, NumberForatException,
+ClassCastException,NullPointerException
+
+Throw Keyword :

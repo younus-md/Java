@@ -1,0 +1,14 @@
+Constructor:  a piece of code having same name as class used to initialze object not to create object.it is
+not a method
+
+public class Hello {
+   String name;
+   //Constructor
+   Hello(){
+      this.name = "Younus";
+   }
+   public static void main(String[] args) {
+      Hello obj = new Hello();
+      System.out.println(obj.name);
+   }
+}

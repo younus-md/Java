@@ -1,6 +1,6 @@
 polymorphism: means having many forms i.e poly - many morphism -forms
 two types
-overloading / compile time polymorphism or static or early binding: if 2 methods has same name different methods they are overloaded.
+overloading / compile time polymorphism or static or early binding: if 2 methods has same name different arguments they are overloaded.
 Automatic Promotion: If your class has method that accept float arguments but if you try to pass double argument then it will be automatically converted
 to float type & that method will be called. else case an compile time error is thrown saying cannot find symbol
 Child Presedence: while resolving overloaded methods compiler gives first presedence(priority) for child type argument rather than parent argument

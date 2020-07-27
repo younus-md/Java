@@ -1,0 +1,50 @@
+Static Blocks:
+ executed while class loading & only once. are useful if we need to perform any activity while class loading (ex: connect to db, connect to native library)
+ To load native library
+ static{
+ System.loadLibrary("path");
+ }
+ All static blocks are executed from top to bottom & a class can have "n" number of static blocks
+
+ We can execute a program without Main method & static block
+1. Class Test{
+ static int r=m1();
+ static int m1(){
+ S.op("print");
+ S.exit(o);
+ return 10;
+ }
+ }
+  2.Class Test{
+ static Test t =new Test(); when ab object is created instance block is executed
+ {
+ Sys.out.prnt();
+ Sys.exit(0);
+   // instance block
+ }
+  }
+ All the above methods applicable till java 1.7
+ Static Block Flow From Parent To Child:
+
+Static cntrl flow be executed first
+ 1.Identification of static members from parent to child
+ 2.Static variable execution & static blocks from parent ti child
+ 3.execution of main method of child
+ Refer Child class.
+
+ Instance Block Flow:
+
+ If a program has only instance block & constructor & main method
+
+ Identification of instance members from top to bottom
+ execution of instance variable instance assignments & instance block assignments from top 2 btm
+ execution of constructor
+
+ Instance Block Flow From Parent To Child:
+
+ 1.Identification of instance members from parent to child
+ 2. execution of instance variable instance assignments & instance block assignments in parent
+ 3.execution of parent constructor
+ 4.execution of instance variable instance assignments & instance block assignments in child
+ 5.execution of child constructor
+ Refer Child class.

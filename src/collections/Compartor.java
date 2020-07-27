@@ -12,7 +12,7 @@ import java.util.TreeSet;
 In this demo program we are implementing out own customised sorting rather natural sorting
  * */
 
-public class Compartor {
+public class Compartor  {
     void comparatorDemo() {
         TreeSet treeSet = new TreeSet( (Collection) new MyComparator() );
         treeSet.add( 20 );

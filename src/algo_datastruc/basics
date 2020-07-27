@@ -1,0 +1,12 @@
+Algorithm :: method for solving a problem
+Data Structure :: method for storing the data (primitive, linear & hirarchy)
+Data Types : stack,queue,bag,union-find,priority queue
+Sorting :quicksort,heapsort,merge sort,radix sort
+Searching:BST, Red black BST,Hash Table
+Strings: KMP,Regex,TST,LZW
+advanced : B-tree, suffix array,maxflow
+
+---------------------------------------------------------------
+Data Structure   Access     Search      Insert     Delete
+----------------------------------------------------------------
+Stack             O(n)       O(n)        O(1)        O(1)

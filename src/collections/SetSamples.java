@@ -11,13 +11,14 @@ public class SetSamples {
      allows null & heterogenous
      best choice if search operation is required
      Constructor :4
-     Defaut capacity is 16 & fill ratio/load factor 0.75 meaning after filling 75 % of hash set a new hashset object is created*/
+     Default capacity is 16 & fill ratio/load factor 0.75 meaning after filling 75 % of hash set a new hashset object is created*/
     void operateHashSet() {
         Set<String> set = new HashSet();
         set.add( "One" );
         set.add( "Two" );
         set.add( "Three" );
         set.add( "Four" );
+        set.add( "Five" );
         set.add( "Five" );
         set.add( null );
         set.add( null );
@@ -37,10 +38,13 @@ public class SetSamples {
         set.add( "Three" );
         set.add( "seven" );
         set.add( "Five" );
-        Iterator<String> i = set.iterator();
+        set.forEach( setvar -> {
+            System.out.println( "nhnh" + setvar );
+        } );
+        /*Iterator<String> i = set.iterator();
         while (i.hasNext()) {
             System.out.println( i.next() );
-        }
+        }*/
     }
 
     /* TreeSet :  Implementation of SortedSet interface Bsed on Balance Tree accept no null
