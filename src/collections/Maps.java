@@ -46,6 +46,10 @@ public class Maps {
         map.put( 5, "Rahul" );
         map.put( 2, "Jai" );
         map.put( 6, "Amit" );
+        map.put(null,"Chikita");
+        map.put(7,"abc");
+
+
         //Traversing Map
         Set set = map.entrySet();//Converting to Set so that we can traverse
         Iterator itr = set.iterator();
