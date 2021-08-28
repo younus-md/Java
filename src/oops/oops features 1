@@ -22,3 +22,36 @@ Uses: Make class read-only or write only using setter/getters
       Hide Data
       Gives control over data
       Easy to Test
+
+Wrapper Class: To wrap primitives into Object type (used in Collection).For every primitive type, the corresponding class is defined
+Each wrapper class has two constructors. one is String
+
+Integer i = new Integer("10")//valid
+Integer i=new Integer("ten")- Number Format Exception(Run Time Exception)
+Integer i =new Integer(5);
+Integer j=new Integer(5);
+i==j -->false
+Integer i=Integer.valueOf(4);
+Integer j=Integer.valueOf(4);
+i==j-->true
+
+Integer a= new Integer(10);
+Integer b=a;
+a==b -->false
+
+Integer a=10
+Integer b=10
+a==b-->true
+
+Integer a =1000
+Integer b=1000
+a==b -->false bcz object create only between -128-127
+Float class contains 3 constructors float,double & string arguments
+Character class has only 1 constructor (char type)
+
+Boolean b = new Boolean("true") or Boolean("True"); -valid
+Boolean a =new Boolean("yes")-a=false
+Boolean b = new Boolean("no")->b=false
+a.equals(b)=true
+
+
