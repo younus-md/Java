@@ -1,0 +1,42 @@
+Springboot -> Uses Programmatic configuration provided by Spring developer.
+/Meta-INF/spring.factories. inside springboot autoconfigure jar
+ Enable
+ Disable
+ Based on @ Condition @ Configuration
+ Open spring.factories from spring-boot-autoconfigure-2.2.11.RELEASE.jar(in SCB)/META-INF
+ search for jparepository -> JPAREPOSITORYAUTOCONFIGURATION CLASS
+ @Configuration(proxyBeanMethods=false)
+  @ConditionalOnBean(value=javax.sql.DataSource.class) //if Data source bean is present enable jpa repo (we add data source repo in property file)
+  @ConditionalOnClass(value=org.springframework.data.jpa.repository.JpaRepository.class)- If JpaRepository class is present up our JPA Repository
+  @ConditionalOnMissingBean(value={org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.class,org.springframework.data.jpa.repository.config.JpaRepositoryConfigExtension.class})
+  @ConditionalOnProperty(prefix="spring.data.jpa.repositories",
+                        name="enabled",
+                        havingValue="true",
+                        matchIfMissing=true)
+  @Import(value=org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesRegistrar.class)
+  @AutoConfigureAfter(value={HibernateJpaAutoConfiguration.class,TaskExecutionAutoConfiguration.class})
+ public class JpaRepositoriesAutoConfiguration
+ extends Object{
+ }
+
+@SpringbootApplication = @Configuration+ @EnableAutoConfiguration(enable few component based on condition)+ @ComponentScan(scan which package registered in bean)
+@Configuration is used to create a class the creates new beans (by annotating its methods with @Bean):
+
+@Configuration
+public class CustomConfiguration {
+
+    @Bean
+    public SomeClass someClass() {
+        return new SomeClass();
+    }
+}
+Springboot.run(ClassName.class,args)
+create application context
+check application type
+register the annotaded
+creates instance of embeddtomcatservletcontainer & adds the context
+
+@ConfigurationProperties allows to map the entire Properties and Yaml files into an object easily. It also allows to validate properties with JSR-303 bean validation.
+By default, the annotation reads from the application.properties file. The source file can be changed with @PropertySource annotation.
+https://zetcode.com/springboot/configurationproperties/
+http://maddy4java.blogspot.com/2019/11/configurationproperties-vs-value.html --value vs configurationproperties
