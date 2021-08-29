@@ -36,6 +36,7 @@ check application type
 register the annotaded
 creates instance of embeddtomcatservletcontainer & adds the context
 
+https://www.youtube.com/watch?v=qlygg_H1M20 -internal working explained
 @ConfigurationProperties allows to map the entire Properties and Yaml files into an object easily. It also allows to validate properties with JSR-303 bean validation.
 By default, the annotation reads from the application.properties file. The source file can be changed with @PropertySource annotation.
 https://zetcode.com/springboot/configurationproperties/
