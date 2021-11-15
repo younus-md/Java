@@ -7,6 +7,12 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
+    	
+    	int i1 =1;
+    	for(System.out.println("hello"); i1<3;i1++) {
+    		System.out.println(i1);
+    	}
+    	reverse("sba");
         doThis();
 
         //Strings
@@ -58,7 +64,19 @@ public class Main {
 
     }
 
-    private static void doThis() {
+    private static void reverse(String st) {
+		// TODO Auto-generated method stub
+    	String rev="";
+    	System.out.print( rev.length() );
+    	char [] chrList=st.toCharArray();
+    	for(int i =chrList.length-1;i>=0;i--) {
+    		rev =rev +chrList[i];
+    	}
+    	System.out.print( "reverse"+rev );
+
+	}
+
+	private static void doThis() {
         int count = 0, sum = 0;
         for (int i = 0; i < 5; i++) {
             //  count = count;
