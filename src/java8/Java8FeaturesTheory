@@ -4,7 +4,12 @@ If a parent interface is FI then child interface is also FI(if it doesn't have a
 
 A functional interface may contain more than one method but it must be default one
 
-Lambda Expression: an anonymous function. During compilation it is converted to a private method but no seperate .class file is generated
+Lambda Expression: an anonymous function (a function in isolation). During compilation it is converted to a private method but no seperate .class file is generated
+
+uses: enables functional programmimg in java
+readable & concise code
+support parallel processing
+helps to use API efficiently
 
    new Thread( () -> System.out.println( "Sampe Thread" ) ).start(); // using Thread
 () = empty argumentlist

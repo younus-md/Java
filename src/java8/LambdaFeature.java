@@ -22,63 +22,69 @@ n-> {n+2;} invalid no semicolon needed
  * */
 public class LambdaFeature {
 
-    /* 1. Usage of Lambda in Thread Creation:
-     The below method we use Lambda to instantiate a Thread using Runnable without implementing it using an extra class
-     */
-    void implementRunnableUsingLambda() {
-        Runnable runnable = () -> {
-            for (int i = 0; i <= 5; i++) {
-                System.out.println( "Child Thread " );
-            }
-        };
-        Thread thread = new Thread( runnable );
-        thread.start();
+	/*
+	 * 1. Usage of Lambda in Thread Creation: The below method we use Lambda to
+	 * instantiate a Thread using Runnable without implementing it using an extra
+	 * class
+	 */
 
-        new Thread( () -> System.out.println( "Sampe Thread" ) ).start(); // using Thread
+	void implementRunnableUsingLambda() {
+		Runnable runnable = () -> {
+			for (int i = 0; i <= 5; i++) {
+				System.out.println("Child Thread ");
+			}
+		};
+		Thread thread = new Thread(runnable);
+		thread.start();
 
-    }
+		new Thread(() -> System.out.println("Sampe Thread")).start(); // using Thread
 
+	}
 
-    /*2. Usage of Lambda in Collections: As Comparator is a Functional Interface, we can use Lambda to sort array list elements
-     */
-    void sortUsingLamda() {
+	/*
+	 * 2. Usage of Lambda in Collections: As Comparator is a Functional Interface,
+	 * we can use Lambda to sort array list elements
+	 */
+	void sortUsingLamda() {
 
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        arrayList.add( 20 );
-        arrayList.add( 50 );
-        arrayList.add( 9 );
-        arrayList.add( 21 );
-        Comparator<Integer> comparator = (t1, t2) -> (t1 > t2) ? -1 : (t1 < t2) ? 1 : 0;
-        Collections.sort( arrayList, comparator );
-        System.out.println( "sorted arraylist" + arrayList );
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		arrayList.add(20);
+		arrayList.add(50);
+		arrayList.add(9);
+		arrayList.add(21);
+		Comparator<Integer> comparator = (t1, t2) -> (t1 > t2) ? -1 : (t1 < t2) ? 1 : 0;
+		Collections.sort(arrayList, comparator);
+		System.out.println("sorted arraylist" + arrayList);
 
-        List<SoftwareEngineer> softwareEngineers = new ArrayList<SoftwareEngineer>();
-        softwareEngineers.add( new SoftwareEngineer( 45000, "Iliyas" ) );
-        softwareEngineers.add( new SoftwareEngineer( 4000, "Iliyas" ) );
-        softwareEngineers.add( new SoftwareEngineer( 5000, "Vamsi" ) );
-        softwareEngineers.add( new SoftwareEngineer( 45100, "Javeed" ) );
-        softwareEngineers.add( new SoftwareEngineer( 34440, "Shasha" ) );
-        Collections.sort( softwareEngineers, (softwareEngineer1, softwareEngineer2) -> (softwareEngineer1.salary > softwareEngineer2.salary) ? -1 : (softwareEngineer1.salary < softwareEngineer1.salary) ? 1 : 0 );
-        System.out.println( "Software Engineer Sorting by salary " + softwareEngineers );
-        Collections.sort( softwareEngineers, (softwareEngineer1, softwareEngineer2) -> (softwareEngineer1.name.compareTo( softwareEngineer2.name )) );
-        System.out.println( "Software Engineer Sorting by names" + softwareEngineers );
+		List<SoftwareEngineer> softwareEngineers = new ArrayList<SoftwareEngineer>();
+		softwareEngineers.add(new SoftwareEngineer(45000, "Iliyas"));
+		softwareEngineers.add(new SoftwareEngineer(4000, "Iliyas"));
+		softwareEngineers.add(new SoftwareEngineer(5000, "Vamsi"));
+		softwareEngineers.add(new SoftwareEngineer(45100, "Javeed"));
+		softwareEngineers.add(new SoftwareEngineer(34440, "Shasha"));
+		Collections.sort(softwareEngineers,
+				(softwareEngineer1, softwareEngineer2) -> (softwareEngineer1.salary > softwareEngineer2.salary) ? -1
+						: (softwareEngineer1.salary < softwareEngineer1.salary) ? 1 : 0);
+		System.out.println("Software Engineer Sorting by salary " + softwareEngineers);
+		Collections.sort(softwareEngineers,
+				(softwareEngineer1, softwareEngineer2) -> (softwareEngineer1.name.compareTo(softwareEngineer2.name)));
+		System.out.println("Software Engineer Sorting by names" + softwareEngineers);
 
-        softwareEngineers.forEach( softwareEngineer -> {
-            System.out.println( "name" + softwareEngineer.name );
-        } );
+		softwareEngineers.forEach(softwareEngineer -> {
+			System.out.println("name" + softwareEngineer.name);
+		});
 
-    }
+	}
 
-    void splitString() {
+	void splitString() {
 
-        Runnable run = () -> {
-            String str = "hi how are you doing";
-            String[] tok = str.split( " " );
-            List<String> lis = Arrays.asList( tok );
-            lis.forEach( lis1 -> System.out.println( lis1 ) );
-        };
+		Runnable run = () -> {
+			String str = "hi how are you doing";
+			String[] tok = str.split(" ");
+			List<String> lis = Arrays.asList(tok);
+			lis.forEach(lis1 -> System.out.println(lis1));
+		};
 
-
-    }
+	}
 
 }
