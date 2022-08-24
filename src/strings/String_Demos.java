@@ -5,7 +5,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
+
+
 /*
+String is immutable in Java which says"object whose internal state remains constant after it has been fully created"
 String implements java.io.Serializable, Comparable<String>, CharSequence
 String s= new String()
 String s= new String("yns")
@@ -84,8 +87,8 @@ public class String_Demos {
         System.out.println( s1.equals( s2 ) ); // t
         StringBuffer sb1 = new StringBuffer( "Syed" );
         StringBuffer sb2 = new StringBuffer( "Syed" );
-        System.out.println( s1 == s2 );//f
-        System.out.println( s1.equals( s2 ) ); //f bcz in String buffer there is no equals method it takes frtom Object class which means reference compariosn
+        System.out.println( sb1 == sb2 );//f
+        System.out.println( sb1.equals( sb2 ) ); //f bcz in String buffer there is no equals method it takes frtom Object class which means reference compariosn
         String str = new String( "Yns" ); // 2 objects are created one in heap & other in scp but reference will be point to heap
         String str1 = "Yns";// one in scp Gc not access SCP area. All scp objects are destroyed during jvm shutdown or during Server shutdown
         str1 = "ABC";
