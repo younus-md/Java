@@ -55,3 +55,14 @@ A stream is a sequence of elements from a source(collections/arrays) that suppor
 Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
 https://howtodoinjava.com/java/stream/java-streams-by-examples/
 https://www.informit.com/articles/article.aspx?p=2303960&seqNum=7
+
+Convert integer array to List of Integer
+int arr = {1,2,3,4}
+List<Integer> list =Arrays.stream(arr).boxed().collect(Collectors.toList());// Stream<Integer>
+List<Integer> list = IntStream.of(arr).boxed().collect(Collectors.toList());   // returns IntStream
+converting string to Character array
+Character[] charObjectArray = 
+    str.chars().mapToObj(c -> (char)c).toArray(Character[]::new); 
+                            
+                            
+                                    
