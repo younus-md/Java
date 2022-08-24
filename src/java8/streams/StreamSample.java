@@ -7,9 +7,13 @@ import java.util.stream.Stream;
 /*A stream is not a data structure instead it takes input from the Collections, Arrays or I/O channels.
 Streams don’t change the original data structure, they only provide the result as per the pipelined methods.
 Intermediate Operators: map() filter () sort
-Terminal Operators : collect() forEach() reduce*/
+Terminal Operators : collect() forEach() reduce
+A Stream in Java can be defined as a sequence of elements from a source. The source of elements here refers to a Collection or Array that provides data to the Stream.*/
+
 public class StreamSample {
 
+	
+	
     void doStreamCreation() {
         Stream<String> emptyStream = Stream.empty(); // emptyStream
         System.out.println( "Empty Stream" + emptyStream );
@@ -32,6 +36,13 @@ public class StreamSample {
         System.out.println( "--Using filter ------------" );
         names.stream().filter( s -> s.startsWith( "S" ) )
                 .forEach( System.out::println ); // forEach is actually a Terminal Operation
+        List<Integer> list = new ArrayList<Integer>();
+        
+        for(int i = 1; i< 10; i++){
+              list.add(i);
+        }
+        Integer [] evenOdd= list.stream().filter(i->i%2==0).toArray(Integer[]::new);
+        System.out.println("evenOdd--->"+evenOdd);
         List<Integer> ints = Arrays.asList( 1, 9, 2, 6, 5, 3, 7, 8, 4 );
         System.out.println( "--Using map----------" );
         ints.stream().map( x -> x * x ).forEach( x -> {

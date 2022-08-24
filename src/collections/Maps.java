@@ -45,7 +45,7 @@ public class Maps {
         map.put( 1, "Amit" );
         map.put( 5, "Rahul" );
         map.put( 2, "Jai" );
-        map.put( 6, "Amit" );
+        map.put( 1, "Amitab" );
         map.put(null,"Chikita");
         map.put(7,"abc");
 
