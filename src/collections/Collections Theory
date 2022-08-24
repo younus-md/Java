@@ -68,7 +68,7 @@ applicable to List
 
 HashSet vs Linked HashSet
 --------------------------------------------------------
-HsshSet is based on HashTable & doesnt preserve insertion oreder & is best for searching operations
+HsshSet is based on HashTable & doesnt preserve insertion order & is best for searching operations
 LinkedHashSet is based on HashTable & LinkedList preserve insertion order best for cache based applications
 
 Comparable vs Comparator
@@ -76,16 +76,19 @@ Comparable vs Comparator
 Comparable deals with default sorting order present in java.lang package with one method implemented by Wrapper & String classes
 here original class is modified
 
-Comparator delas with customised sorting present in java.uti with two methods implemented by Collator &Rule Based Collator no original class is modified
+Comparator deals with customised sorting present in java.uti with two methods implemented by Collator &Rule Based Collator no original class is modified
 
 HashMap vs HashTable
 -------------------------------------------------------------------------------------------------------------
 HashMap is non-synchronized allows one null key & null value & is fast where as HashTable is synchronized no nulls are allowed & slow
 
 
-
-
-
-
-
-
+ConcurrentHashMap	                                                                                                   SynchronizedMap	                         HashTable
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+We will get thread safety without locking the total map object just with a bucket level lock.	We will get thread safety by locking the whole map object.	We will get thread safety by locking the whole map object
+At a time multiple threads are allowed to operate on map objects safely.	At a time only one thread is allowed to perform any operation on a map object.	At a time one thread is allowed to operate on a map object.
+Read operation can be performed without lock but write operation can be performed with bucket level lock.	Every read and write operations required total map object 	Every read and write operations required total map object 
+While one thread iterating map objects the other thread is allowed to modify the map and won’t get ConcurrentModificationException.	While one thread iterating map object the other threads are not allowed to modify the map otherwise we will get ConcurrentModificationException	While one thread iterating map object the other threads are not allowed to modify the map otherwise we will get ConcurrentModificationException
+Iterator of ConcurrentHashMap is fail-safe and won’t raise ConcurrentModificationException	Iterator of SynchronizedMap is fail-fast and it will raise ConcurrentModificationException	Iterator of HashTable is fail-fast and it will raise ConcurrentModificationException
+Null is not allowed for both keys and values.	Null is allowed for both keys and values	Null is not allowed for both keys and values.
+Introduce in java 1.5version	Introduce in java 1.2 version	Introduce in java 1.0version
