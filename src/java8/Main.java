@@ -20,6 +20,7 @@ public class Main implements DefaultMethods {
 	}
 
 	public static void main(String[] args) {
+		System.out.println(0123);
 
 		List<Integer> list1 = new ArrayList<Integer>();
 		for (int i = 100; i < 6; i++) {

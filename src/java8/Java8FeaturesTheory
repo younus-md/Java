@@ -5,7 +5,7 @@ If a parent interface is FI then child interface is also FI(if it doesn't have a
 A functional interface may contain more than one method but it must be default one
 
 Lambda Expression: an anonymous function (a function in isolation). During compilation it is converted to a private method but no seperate .class file is generated
-
+the expression through which we can represent anonymous function
 uses: enables functional programmimg in java
 readable & concise code
 support parallel processing
@@ -53,5 +53,5 @@ Streams (java.util.stream) an interface
 -----------------------------------------------------------------------------------------------------
 A stream is a sequence of elements from a source(collections/arrays) that supports aggregate operations on them. or A stream is a sequence of objects that supports various methods which can be pipelined to produce the desired result.
 Each intermediate operation is lazily executed and returns a stream as a result, hence various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
-
+https://howtodoinjava.com/java/stream/java-streams-by-examples/
 https://www.informit.com/articles/article.aspx?p=2303960&seqNum=7
